@@ -80,7 +80,7 @@ console.log(calcAllAreas(10, 50, 'triângulo'));
 
 // Desafio 8 - Crie a função fizzBuzz
 const fizzBuzz = (array) => array.map((item) => {
-  if (item % 3 && item % 5 === 0) {
+  if (item % 3 === 0 && item % 5 === 0) {
     return 'fizzBuzz';
   } if (item % 3 === 0) {
     return 'fizz';
@@ -89,6 +89,7 @@ const fizzBuzz = (array) => array.map((item) => {
   }
   return 'bug!';
 });
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
 function encode(stringEn) {
