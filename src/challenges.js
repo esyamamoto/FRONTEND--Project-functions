@@ -14,7 +14,7 @@ console.log(compareTrue(elefante, macaco));
 // Desafio 2 - Crie a função splitSentence
 const splitSentence = (string) => {
   return string.split(' ');
-}
+};
 console.log(splitSentence('go trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete não tem ré'));
@@ -25,12 +25,12 @@ const concatName = (array) => {
   let ultimaPalavra = array[array.length - 1];
 
   return `${ultimaPalavra}, ${primeiraPalavra}`;
-}
+};
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 4 - Crie a função footballPoints
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return wins * 3 + ties;
 }
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
@@ -65,10 +65,16 @@ function calcRectangleArea(base, height) {
 }
 function calcAllAreas(base, height, form) {
   if (form === 'triângulo') {
-    return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
+    return `O valor da área do triângulo é de: ${calcTriangleArea(
+      base,
+      height
+    )}`;
   }
   if (form === 'retângulo') {
-    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
+    return `O valor da área do retângulo é de: ${calcRectangleArea(
+      base,
+      height
+    )}`;
   }
   return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
 }
@@ -77,30 +83,53 @@ console.log(calcAllAreas(10, 50, 'quadrado'));
 console.log(calcAllAreas(10, 50, 'triângulo'));
 
 // Desafio 7 - Crie a função catAndMouse
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return 'os gatos trombam e o rato foge'; //mesma distancia dos gatos
+  }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1'; //gato1 mais perto
+  }
+  return 'cat2'; //gato2 mais perto
+}
+//console.log(catAndMouse(10, 17, 21));
 
 // Desafio 8 - Crie a função fizzBuzz
-const fizzBuzz = (array) => array.map((item) => {
-  if (item % 3 === 0 && item % 5 === 0) {
-    return 'fizzBuzz';
-  } if (item % 3 === 0) {
-    return 'fizz';
-  } if (item % 5 === 0) {
-    return 'buzz';
-  }
-  return 'bug!';
-});
+const fizzBuzz = (array) =>
+  array.map((item) => {
+    if (item % 3 === 0 && item % 5 === 0) {
+      return 'fizzBuzz';
+    }
+    if (item % 3 === 0) {
+      return 'fizz';
+    }
+    if (item % 5 === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
+  });
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
 function encode(stringEn) {
-  const newStringEn = stringEn.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  const newStringEn = stringEn
+    .replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
   return newStringEn;
 }
 const fraseEncode = 'hi there!';
-console.log(encode(fraseEncode)); 
+console.log(encode(fraseEncode));
 
 function decode(stringDec) {
-  const newStringDec = stringDec.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  const newStringDec = stringDec
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
   return newStringDec;
 }
 const fraseDecode = 'h3 th2r2!';
@@ -108,20 +137,22 @@ console.log(decode(fraseDecode));
 
 // Desafio 10 - Crie a função techList
 
-
 // Não modifique essas linhas
 module.exports = {
-  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
-  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => {}),
-  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => {}),
-  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => {}),
-  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => {}),
-  concatName: typeof concatName === 'function' ? concatName : (() => {}),
-  decode: typeof decode === 'function' ? decode : (() => {}),
-  encode: typeof encode === 'function' ? encode : (() => {}),
-  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => {}),
-  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => {}),
-  highestCount: typeof highestCount === 'function' ? highestCount : (() => {}),
-  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => {}),
-  techList: typeof techList === 'function' ? techList : (() => {}),
+  calcTriangleArea:
+    typeof calcTriangleArea === 'function' ? calcTriangleArea : () => {},
+  calcRectangleArea:
+    typeof calcRectangleArea === 'function' ? calcRectangleArea : () => {},
+  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : () => {},
+  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : () => {},
+  compareTrue: typeof compareTrue === 'function' ? compareTrue : () => {},
+  concatName: typeof concatName === 'function' ? concatName : () => {},
+  decode: typeof decode === 'function' ? decode : () => {},
+  encode: typeof encode === 'function' ? encode : () => {},
+  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : () => {},
+  footballPoints:
+    typeof footballPoints === 'function' ? footballPoints : () => {},
+  highestCount: typeof highestCount === 'function' ? highestCount : () => {},
+  splitSentence: typeof splitSentence === 'function' ? splitSentence : () => {},
+  techList: typeof techList === 'function' ? techList : () => {},
 };
