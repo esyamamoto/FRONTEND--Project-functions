@@ -1,10 +1,25 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Projeto functions
+
+
+<details>
+<summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
+Neste projeto: implementacoes no código de funções que resolvem problemas com respostas pré-determinadas. 
+ </details>
+
+<details>
+  <summary><strong>:memo: Tecnologias Utilizadas:</strong></summary><br />
+
+- Javascript
+
+</details> 
+
+<details>
+
+<summary>Orientacoes</summary><br />
+  - Instale as dependências: `npm install
+  - Para executar todos os testes utilize:
+  ```bash
+  npm test
+  ```
+</details>
+
